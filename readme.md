@@ -2,7 +2,7 @@
 --------
 a nixos configuration file that is aimed to work with 3 different types of hosts ( very different and versatile )
 these hosts are:
-- [ ] utm-vm (meowscarada)
+- [x] utm-vm (meowscarada)
 - [ ] nixos (lucario)
 - [ ] nix-darwin (anubis)
 
