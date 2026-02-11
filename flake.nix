@@ -88,11 +88,11 @@
 
     # NOTE: 'nixos' is the default hostname
     nixosConfigurations = {
-      "meowscarada" = inputs.nixpkgs.lib.nixosSystem {
+      "meowscarada" = nixpkgs.lib.nixosSystem {
         modules = [./hosts/meowscarada];
         specialArgs = {inherit inputs outputs;};
       };
-      "lucario" = inputs.nixpkgs.lib.nixosSystem {
+      "lucario" = nixpkgs.lib.nixosSystem {
         modules = [./hosts/lucario];
         specialArgs = {inherit inputs outputs;};
       };
@@ -104,19 +104,19 @@
   # Standalone home-manager configuration entrypoint
   # Available through 'home-manager --flake .#your-username@your-hostname'
   homeConfigurations = {
-    "monyx@meowscarada" = inputs.home-manager.lib.homeManagerConfiguration {
+    "monyx@meowscarada" = lib.homeManagerConfiguration {
       # Home-manager requires 'pkgs' instance
       pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure
       extraSpecialArgs = {inherit inputs outputs;};
       modules = [./home-manager/linux];
     };
-    "monyx@lucario" = inputs.home-manager.lib.homeManagerConfiguration {
+    "monyx@lucario" = lib.homeManagerConfiguration {
       # Home-manager requires 'pkgs' instance
       pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure
       extraSpecialArgs = {inherit inputs outputs;};
       modules = [./home-manager/linux];
     };
-    "monyx@anubis" = inputs.home-manager.lib.homeManagerConfiguration {
+    "monyx@anubis" = lib.homeManagerConfiguration {
       # Home-manager requires 'pkgs' instance
       pkgs = nixpkgs.legacyPackages.x86_64-darwin; # FIXME replace x86_64-linux with your architecure
       extraSpecialArgs = {inherit inputs outputs;};
@@ -129,7 +129,7 @@
   # Standalone nix-darwin configuration entrypoint
   # Available through 'darwin-rebuild --flake .#your-hostname
   darwinConfigurations = {
-    "anubis" = inputs.nix-darwin.lib.darwinSystem {
+    "anubis" = nix-darwin.lib.darwinSystem {
       modules = [./hosts/anubis]; # FIXME: WIP
       specialArgs = {inherit inputs outputs;};
     };
