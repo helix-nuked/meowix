@@ -39,6 +39,8 @@
     nix-darwin,
     ...
   } @ inputs: let
+    inherit (self) outputs;
+    lib = nixpkgs.lib // home-manager.lib;
     ##########
     # System #
     ##########
