@@ -56,12 +56,6 @@
     # This is a function that generates an attribute by calling a function you
     # pass to it, with each system as an argument
     forAllSystems = nixpkgs.lib.genAttrs systems;
-    ####################
-    # System Variables #
-    ####################
-
-    hostname = "meowscarada";
-    username = "monyx";
   in {
     ###################
     # Custom Packages #
@@ -110,13 +104,19 @@
   # Standalone home-manager configuration entrypoint
   # Available through 'home-manager --flake .#your-username@your-hostname'
   homeConfigurations = {
-    "${username}@${hostname}" = home-manager.lib.homeManagerConfiguration {
+    "monyx@meowscarada" = home-manager.lib.homeManagerConfiguration {
       # Home-manager requires 'pkgs' instance
       pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure
       extraSpecialArgs = {inherit inputs outputs;};
       modules = [./home-manager/linux];
     };
-    "${username}@anubis" = home.manager.lib.homeManagerConfiguration {
+    "monyx@lucario" = home-manager.lib.homeManagerConfiguration {
+      # Home-manager requires 'pkgs' instance
+      pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure
+      extraSpecialArgs = {inherit inputs outputs;};
+      modules = [./home-manager/linux];
+    };
+    "monyx@anubis" = home.manager.lib.homeManagerConfiguration {
       # Home-manager requires 'pkgs' instance
       pkgs = nixpkgs.legacyPackages.x86_64-darwin; # FIXME replace x86_64-linux with your architecure
       extraSpecialArgs = {inherit inputs outputs;};
@@ -129,7 +129,7 @@
   # Standalone nix-darwin configuration entrypoint
   # Available through 'darwin-rebuild --flake .#your-hostname
   darwinConfigurations = {
-    "${hostname}" = nix-darwin.lib.darwinSystem {
+    "anubis" = nix-darwin.lib.darwinSystem {
       modules = [./hosts/anubis]; # FIXME: WIP
       specialArgs = {inherit inputs outputs;};
     };
