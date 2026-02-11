@@ -104,13 +104,13 @@
   # Standalone home-manager configuration entrypoint
   # Available through 'home-manager --flake .#your-username@your-hostname'
   homeConfigurations = {
-    "monyx@meowscarada" = home-manager.lib.homeManagerConfiguration {
+    "monyx@meowscarada" = home.manager.lib.homeManagerConfiguration {
       # Home-manager requires 'pkgs' instance
       pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure
       extraSpecialArgs = {inherit inputs outputs;};
       modules = [./home-manager/linux];
     };
-    "monyx@lucario" = home-manager.lib.homeManagerConfiguration {
+    "monyx@lucario" = home.manager.lib.homeManagerConfiguration {
       # Home-manager requires 'pkgs' instance
       pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure
       extraSpecialArgs = {inherit inputs outputs;};
