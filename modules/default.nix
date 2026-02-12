@@ -7,5 +7,5 @@
   homeManagerModules = import ./home-manager;
   # Reusable home-manager modules you might want to export
   # These are usually stuff you would upstream into nix-darwin
-  darwinModules = import ./nix-darwin;
+  darwinModules = import ./darwin;
 }
