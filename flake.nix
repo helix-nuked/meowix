@@ -97,41 +97,41 @@
         specialArgs = {inherit inputs outputs;};
       };
     };
-  };
-  #################################
-  # Home-Manager Configuratoin(s) #
-  #################################
-  # Standalone home-manager configuration entrypoint
-  # Available through 'home-manager --flake .#your-username@your-hostname'
-  homeConfigurations = {
-    "monyx@meowscarada" = home-manager.lib.homeManagerConfiguration {
-      # Home-manager requires 'pkgs' instance
-      pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure
-      extraSpecialArgs = {inherit inputs outputs;};
-      modules = [./home-manager/linux];
+    #################################
+    # Home-Manager Configuratoin(s) #
+    #################################
+    # Standalone home-manager configuration entrypoint
+    # Available through 'home-manager --flake .#your-username@your-hostname'
+    homeConfigurations = {
+      "monyx@meowscarada" = home-manager.lib.homeManagerConfiguration {
+        # Home-manager requires 'pkgs' instance
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./home-manager/linux];
+      };
+      "monyx@lucario" = home-manager.lib.homeManagerConfiguration {
+        # Home-manager requires 'pkgs' instance
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./home-manager/linux];
+      };
+      "monyx@anubis" = home-manager.lib.homeManagerConfiguration {
+        # Home-manager requires 'pkgs' instance
+        pkgs = nixpkgs.legacyPackages.x86_64-darwin; # FIXME replace x86_64-linux with your architecure
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./home-manager/macos]; # FIXME: WIP
+      };
     };
-    "monyx@lucario" = home-manager.lib.homeManagerConfiguration {
-      # Home-manager requires 'pkgs' instance
-      pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure
-      extraSpecialArgs = {inherit inputs outputs;};
-      modules = [./home-manager/linux];
-    };
-    "monyx@anubis" = home-manager.lib.homeManagerConfiguration {
-      # Home-manager requires 'pkgs' instance
-      pkgs = nixpkgs.legacyPackages.x86_64-darwin; # FIXME replace x86_64-linux with your architecure
-      extraSpecialArgs = {inherit inputs outputs;};
-      modules = [./home-manager/macos]; # FIXME: WIP
-    };
-  };
-  ###############################
-  # nix-darwin Configuration(s) #
-  ###############################
-  # Standalone nix-darwin configuration entrypoint
-  # Available through 'darwin-rebuild --flake .#your-hostname
-  darwinConfigurations = {
-    "anubis" = nix-darwin.lib.darwinSystem {
-      modules = [./hosts/anubis]; # FIXME: WIP
-      specialArgs = {inherit inputs outputs;};
+    ###############################
+    # nix-darwin Configuration(s) #
+    ###############################
+    # Standalone nix-darwin configuration entrypoint
+    # Available through 'darwin-rebuild --flake .#your-hostname
+    darwinConfigurations = {
+      "anubis" = nix-darwin.lib.darwinSystem {
+        modules = [./hosts/anubis]; # FIXME: WIP
+        specialArgs = {inherit inputs outputs;};
+      };
     };
   };
 }
