@@ -99,6 +99,7 @@
       "meowscarada" = nixpkgs.lib.nixosSystem {
         modules = [
           determinate.nixosModules.default
+          {networking.hostName = "meowscarada";}
           ./hosts/meowscarada
         ];
         specialArgs = {inherit inputs outputs;};
@@ -106,6 +107,7 @@
       "lucario" = nixpkgs.lib.nixosSystem {
         modules = [
           determinate.nixosModules.default
+          {networking.hostName = "lucario";}
           ./hosts/lucario
         ];
         specialArgs = {inherit inputs outputs;};
