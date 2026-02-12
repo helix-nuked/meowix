@@ -9,18 +9,25 @@
     # If you prefer a stable release instead, you can this to the latest number shown here: https://nixos.org/download
     # i.e. nixos-24.11
     # Use `nix flake update` to update the flake to the latest revision of the chosen release channel.
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
 
     # You can access packages and modules from different nixpkgs revs
     # at the same time. Here's an working example:
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs-stable.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
     # Also see the 'stable-packages' overlay at 'overlays/default.nix'.
+
+    ###################
+    # determinate-nix #
+    ###################
+
+    # Determinate package manager (has lazy trees)
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
 
     ################
     # home-manager #
     ################
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "https://flakehub.com/f/nix-community/home-manager/*";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -28,7 +35,7 @@
     # nix-darwin #
     ##############
     nix-darwin = {
-      url = "github:nix-darwin/nix-darwin";
+      url = "https://flakehub.com/f/nix-darwin/nix-darwin/*";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -37,6 +44,7 @@
     nixpkgs,
     home-manager,
     nix-darwin,
+    determinate,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -89,11 +97,17 @@
     # NOTE: 'nixos' is the default hostname
     nixosConfigurations = {
       "meowscarada" = nixpkgs.lib.nixosSystem {
-        modules = [./hosts/meowscarada];
+        modules = [
+          determinate.nixosModules.default
+          ./hosts/meowscarada
+        ];
         specialArgs = {inherit inputs outputs;};
       };
       "lucario" = nixpkgs.lib.nixosSystem {
-        modules = [./hosts/lucario];
+        modules = [
+          determinate.nixosModules.default
+          ./hosts/lucario
+        ];
         specialArgs = {inherit inputs outputs;};
       };
     };
