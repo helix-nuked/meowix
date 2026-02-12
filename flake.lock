@@ -14,7 +14,7 @@
         "rev": "a5469e9aa3870941320cb92d899b66e141c5a3cd",
         "revCount": 394,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/DeterminateSystems/determinate/3.15.2/019bde7d-0725-73ef-9705-498c50ef6e00/source.tar.gz?rev=a5469e9aa3870941320cb92d899b66e141c5a3cd&revCount=394"
+        "url": "https://api.flakehub.com/f/pinned/DeterminateSystems/determinate/3.15.2/019bde7d-0725-73ef-9705-498c50ef6e00/source.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -132,7 +132,7 @@
         "rev": "0d782ee42c86b196acff08acfbf41bb7d13eed5b",
         "revCount": 5858,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/nix-community/home-manager/0.2511.5858%2Brev-0d782ee42c86b196acff08acfbf41bb7d13eed5b/019c2bbe-fad2-7b9f-9842-49f15da2e77b/source.tar.gz?rev=0d782ee42c86b196acff08acfbf41bb7d13eed5b&revCount=5858"
+        "url": "https://api.flakehub.com/f/pinned/nix-community/home-manager/0.2511.5858%2Brev-0d782ee42c86b196acff08acfbf41bb7d13eed5b/019c2bbe-fad2-7b9f-9842-49f15da2e77b/source.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -172,7 +172,7 @@
         "rev": "08585aacc3d6d6c280a02da195fdbd4b9cf083c2",
         "revCount": 2291,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/nix-darwin/nix-darwin/0.2511.2291%2Brev-08585aacc3d6d6c280a02da195fdbd4b9cf083c2/019b8f3b-1aad-7a2a-a9a5-88d047da3691/source.tar.gz?rev=08585aacc3d6d6c280a02da195fdbd4b9cf083c2&revCount=2291"
+        "url": "https://api.flakehub.com/f/pinned/nix-darwin/nix-darwin/0.2511.2291%2Brev-08585aacc3d6d6c280a02da195fdbd4b9cf083c2/019b8f3b-1aad-7a2a-a9a5-88d047da3691/source.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -232,7 +232,7 @@
         "rev": "6c5e707c6b5339359a9a9e215c5e66d6d802fd7a",
         "revCount": 907603,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.2511.907603%2Brev-6c5e707c6b5339359a9a9e215c5e66d6d802fd7a/019c506a-c319-7499-ac9b-6da54f7d5889/source.tar.gz?rev=6c5e707c6b5339359a9a9e215c5e66d6d802fd7a&revCount=907603"
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.2511.907603%2Brev-6c5e707c6b5339359a9a9e215c5e66d6d802fd7a/019c506a-c319-7499-ac9b-6da54f7d5889/source.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -260,7 +260,7 @@
         "rev": "d6c71932130818840fc8fe9509cf50be8c64634f",
         "revCount": 942779,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.1.942779%2Brev-d6c71932130818840fc8fe9509cf50be8c64634f/019c3fb4-003d-710c-9b72-1d2bb1b28de3/source.tar.gz?rev=d6c71932130818840fc8fe9509cf50be8c64634f&revCount=942779"
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.1.942779%2Brev-d6c71932130818840fc8fe9509cf50be8c64634f/019c3fb4-003d-710c-9b72-1d2bb1b28de3/source.tar.gz"
       },
       "original": {
         "type": "tarball",
