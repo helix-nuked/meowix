@@ -20,7 +20,7 @@
     # home-manager #
     ################
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -28,7 +28,7 @@
     # nix-darwin #
     ##############
     nix-darwin = {
-      url = "github.nix-darwin/nix-darwin/master";
+      url = "github.nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
