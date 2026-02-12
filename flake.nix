@@ -9,7 +9,7 @@
     # If you prefer a stable release instead, you can this to the latest number shown here: https://nixos.org/download
     # i.e. nixos-24.11
     # Use `nix flake update` to update the flake to the latest revision of the chosen release channel.
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # You can access packages and modules from different nixpkgs revs
     # at the same time. Here's an working example:
