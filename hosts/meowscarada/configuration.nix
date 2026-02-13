@@ -26,16 +26,6 @@
     kernelPackages = with pkgs; linuxPackages_latest;
   };
 
-  networking = {
-    # Define your hostname.
-    hostName = "meowscarada";
-    # Configure network connections interactively with nmcli or nmtui.
-    networkmanager.enable = true;
-    # Configure network proxy if necessary
-    # proxy.default = "http://user:password@proxy:port/";
-    # proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-  };
-
   # Set your time zone.
   time.timeZone = "Asia/Tashkent"; # I live in Uzbekistan.
 
@@ -67,25 +57,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
-
-  users = {
-    mutableUsers = false;
-    users = {
-      "root" = {
-        isSystemUser = true;
-        hashedPassword = "$6$rx4JIYoJUSzq3v0l$8cevGhPZrNTw0ou/XjmVcki/sfD5.2J9Wub8H2Pt65IjC3xEwdNw5Lfo41bsx3AiMCQbYAeJ0IgKKAGZjtByL1";
-      };
-      # Define a user account.
-      "monyx" = {
-        hashedPassword = "$6$oIE5OhKIdKQ8Iazs$qgd2Tfc5wwmsutOeRFXpb/yzwChYR/EEHtLhKViTQbz.cxAINqdYIq6sFRVot1nfYU2mGlgI4yidyCl9C39cD1";
-        isNormalUser = true;
-        extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
-        packages = with pkgs; [
-          tree
-        ];
-      };
-    };
-  };
 
   # programs.firefox.enable = true;
 
