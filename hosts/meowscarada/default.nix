@@ -1,6 +1,6 @@
-{...}: {
+{outputs, ...}: {
   imports = [
-    outputs.base
+    outputs.nixosModules.base
     ./configuration.nix
   ];
 }
