@@ -1,3 +1,5 @@
+# abandon...
+
 # meowix
 --------
 a nixos configuration file that is aimed to work with 3 different types of hosts ( very different and versatile )
